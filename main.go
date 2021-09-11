@@ -19,7 +19,7 @@ func main() {
 
 	//加载模板
 	router.LoadHTMLGlob("views/*")
-	router.GET("/", controller.IndexHandle)          //首页
-	router.GET("/category", controller.CategoryList) //分类列表页面
+	router.GET("/", controller.IndexHandle)           //首页
+	router.GET("/category/", controller.CategoryList) //分类列表页面
 	_ = router.Run(":8001")
 }
