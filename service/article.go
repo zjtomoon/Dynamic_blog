@@ -2,8 +2,8 @@ package service
 
 import (
 	"fmt"
-	"golangProjects/my-demos/gin-blog/database/db"
-	"golangProjects/my-demos/gin-blog/model"
+	"gin-blog/database/db"
+	"gin-blog/model"
 )
 
 // 获取文章和对应的分类
@@ -46,11 +46,13 @@ func GetArticleRecordList(pageNum, pageSize int) (articleRecordList []*model.Art
 func continueDemo() {
 forloop1:
 	for i := 0; i < 5; i++ {
-		// forloop2
+		// forloop2:
 		for j := 0; j < 5; j++ {
-			continue forloop1
+			if i == 2 && j == 2 {
+				continue forloop1
+			}
+			fmt.Printf("%v-%v\n", i, j)
 		}
-		fmt.Printf("%v-%v\n", i, j)
 	}
 	fmt.Println(111111111111)
 }

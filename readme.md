@@ -25,4 +25,3 @@
 + category：分类表
 + comment：评论表
 + leave：留言表
-
