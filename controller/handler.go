@@ -16,12 +16,13 @@ func IndexHandle(c *gin.Context) {
 		c.HTML(http.StatusInternalServerError, "views/500.html", nil)
 	}
 
-	//加载分类数据
+	//2. 加载分类数据
 	categoryList, err := service.GetALLCategoryList()
 	if err != nil {
 		c.HTML(http.StatusInternalServerError, "views/500.html", nil)
 	}
 
+	//gin.H本质上是一个map
 	//分配数据
 	//var data map[string]interface{} = make(map[string]interface{})
 	//data["article_list"] = articleRecordList
