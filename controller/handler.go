@@ -34,7 +34,7 @@ func IndexHandle(c *gin.Context) {
 	})
 }
 
-//点击分类就进行分类
+//点击分类云进行分类
 func CategoryList(c *gin.Context) {
 	categoryIdStr := c.Query("category_id")
 	categoryId, err := strconv.ParseInt(categoryIdStr, 10, 64)
